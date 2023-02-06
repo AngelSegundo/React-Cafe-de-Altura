@@ -1,0 +1,138 @@
+.shoppingCarts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+    padding-bottom: 5rem;
+    background-color: #1a202c;
+    visibility: hidden;
+}
+
+.shoppingCart {
+    position: fixed;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    scale: .7;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    overflow-x: scroll;
+    transition: all 300ms ease-in-out;
+    background-color: grey;
+    opacity: 0;
+}
+
+.shoppingCarts .show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.shoppingCarts .show {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+}
+
+.shoppingCart h2 {
+    text-align: left;
+    margin-left: 60px;
+    font-size: 2rem;
+}
+
+.shoppingCartClose box-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    left: 810px;
+    margin: 3rem 0 0 2rem;
+}
+
+.shoppingCartClose box-icon:hover {
+    fill: crimson;
+}
+
+.shoppingCartCenter {
+    width: auto;
+    
+    justify-content: center;
+    border: 1px;
+    background-color: white;
+}
+
+.shoppingCartItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 100%;
+    max-width: 2rem auto;
+    box-shadow: 0 1px 10px #08a05c;
+    
+}
+
+.shoppingCartItem img {
+    width: 9rem;
+}
+
+.shoppingCartItem h3 {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.shoppingCartItem .price {
+    color: #1a202c;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: start;
+    margin-left: -1rem;
+}
+
+.shoppingCartItem box-icon {
+    fill: #08a05c;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: .3rem;
+}
+
+.shoppingCartItem .amount {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.shoppingCartItem .remove__item box-icon {
+    width: 60px;
+    height: 80px;
+    fill: crimson;
+    margin-top: 2rem;
+}
+
+.shoppingCartFooter {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.shoppingCartFooter h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.shoppingCartFooter .btn {
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #08a05c;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.shoppingCartFooter .btn:hover {
+    background-color: #0f5c39;
+    color: white
+}
