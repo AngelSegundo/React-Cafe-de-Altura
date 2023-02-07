@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import './Cart.css'
 import { BoxIconElement } from 'boxicons'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const { showCart, setShowCart, cartItems, setCartItems, total } = useContext(DataContext)
@@ -10,8 +11,8 @@ const Cart = () => {
     setShowCart(!showCart)
   }
 
-  const show1 = showCart ? "shoppingCarts show" : "shoppingCarts"
-  const show2 = showCart ? "shoppingCart show" : "shoppingCart"
+  const showShoppingCartBox = showCart ? "shoppingCartsShow" : "shoppingCarts"
+  const showShoppingCart = showCart ? "shoppingCartShow" : "shoppingCart"
 
 
   const plus = (id) => {
@@ -27,7 +28,7 @@ const Cart = () => {
   const minus = (id) => {
     cartItems.forEach((product) => {
       if (product._id === id) {
-        product.amount === 1 ? product.amount = 1 : product.amount -= 1
+        product.amount === 1 ? removeProduct(product._id) : product.amount -= 1
       }
       setCartItems([...cartItems])
     })
@@ -48,22 +49,23 @@ const Cart = () => {
   }
 
   return (
-    <div className={show1}>
-      <div className={show2}>
+    <div className={showShoppingCartBox}>
+      <div className={showShoppingCart}>
         <div className='shoppingCartClose' onClick={toogleShowCart}>
           <box-icon name="x"></box-icon>
         </div>
-        <h2>Su Carrito</h2>
+        <h2>CESTA</h2>
         <div className='shoppingCartCenter'>
           {
             cartItems.length === 0 ? (<h2 style={{ textAlign: "center", fontSize: "3rem" }}>Cesta vacia</h2>) :
 
               cartItems.map(product => (
-                <div div className='shoppingCartItem' key={product._id}>
+                <div className='shoppingCartItem' key={product._id}>
                   <img alt={product.brand} src={product.img_url} />
                   <div>
                     <h3>{product.brand}</h3>
-                    <p className='price'><span>{product.price.toFixed(2)}</span> €</p>
+                    <p className='price'>{product.price.toFixed(2)} €</p>
+                    <h4>Subtotal: {(product.price.toFixed(2) * product.amount.toFixed(2)).toFixed(2)} €</h4>
                   </div>
                   <div>
                     <box-icon name="up-arrow" type="solid" onClick={() => plus(product._id)}></box-icon>
@@ -80,8 +82,10 @@ const Cart = () => {
         {
           cartItems.length !== 0 ?
             <div className='shoppingCartFooter'>
-              <h3>Total: <span>{total.toFixed(2)}</span> €</h3>
-              <button className='btn'>Tramitar pedido</button>
+
+              <h3>Total: {total.toFixed(2)} €</h3>
+              <h5>Incluye {(total.toFixed(2) * 0.21).toFixed(2)} € de IVA</h5>
+              <Link to="/cesta" className='btn' onClick={toogleShowCart}>Tramitar pedido</Link>
             </div> : ''
         }
 

@@ -1,0 +1,91 @@
+.Cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 147px;
+    gap: 24px;
+    height: 380px;
+    background-color: #2A5B45;
+    background: url(../../assets/img/086aa1e226e5adfe010fd0fb3ff3e2cb.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Cards h2 {
+    width: 350px;
+    height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    width: 316px;
+    height: 232px;
+    background: #FFFFFF;
+    border: 1px solid #F7F5F3;
+    box-shadow: 0px 1px 4px rgba(227, 222, 215, 0.8);
+    border-radius: 8px;
+}
+
+.conditions picture {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+    width: 64px;
+    height: 64px;
+    background: #2A5B45;
+    border-radius: 20px;
+}
+
+.conditions picture img {
+    width: 40px;
+    height: 40px;
+}
+
+.conditionsImg {
+    left: 20.83%;
+    right: 20.83%;
+    top: 12.5%;
+    bottom: 12.5%;
+    border: 2px solid transparent;
+}
+
+.conditions h3 {
+    width: 268px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #2B2A2B;
+}
+
+.conditions p {
+    width: 268px;
+    height: 64px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #111827;
+}

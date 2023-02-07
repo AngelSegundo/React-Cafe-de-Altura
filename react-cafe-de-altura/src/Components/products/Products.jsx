@@ -4,10 +4,12 @@ import ProductCard from '../productCard/ProductCard'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../context/DataContext'
 
-const Products = () => {
+const Products = (props) => {
+    const { title, showProducts, link} = props
 
     const { data } = useContext(DataContext)
     const sortDataByPrice = data.sort((a, b) => a.price - b.price, 0)
+    
 
     sortDataByPrice.map((product) => {
         if (!product.available) {
@@ -18,11 +20,11 @@ const Products = () => {
 
     return (
         <div className='cards'>
-            <h2>Novedades</h2>
+            <h2>{title}</h2>
             <div className='cardsWrapper'>
-                {<ProductCard products={sortDataByPrice} showProducts={4} />}
+                {<ProductCard products={sortDataByPrice} showProducts={showProducts} />}
             </div>
-            <Link to="/Shop" className='arrowBlack'>Ver todos →</Link>
+            <Link to="/Store" className='arrowBlack'>{link}</Link>
         </div>
     )
 }

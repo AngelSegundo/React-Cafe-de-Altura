@@ -1,13 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './pages/Home/Homepage';
+import Homepage from './pages/Homepage';
 import Navbar from './Components/navBar/Navbar';
-import Cart from './Components/cart/Cart';
-import Footer from './Components/footer/Footer';
+import Cart from './Components/Cart/Cart';
+import Copyright from './Components/Copyright/Copyright';
 import { CartContextProvider } from './context/CartContext';
 import { DataContextProvider } from './context/DataContext';
-import Cart2 from './Components/cart/Cart2';
+import Store from './pages/Store';
+import Cesta from './pages/Cesta';
+
 
 
 function App() {
@@ -16,11 +18,13 @@ function App() {
       <DataContextProvider>
         <CartContextProvider>
           <Navbar />
-          <Cart/>
+          <Cart />
           <Routes>
             <Route path='/' element={<Homepage />} />
-          </Routes>
-          <Footer />
+            <Route path='/store' element={<Store />} />
+            <Route path='/cesta' element={<Cesta />} />
+                      </Routes>
+          <Copyright />
         </CartContextProvider>
       </DataContextProvider>
     </div>

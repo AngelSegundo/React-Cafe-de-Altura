@@ -24,22 +24,47 @@
     transition: all 300ms ease-in-out;
     background-color: grey;
     opacity: 0;
+
 }
 
-.shoppingCarts .show {
-    visibility: visible;
-    opacity: 1;
+.shoppingCartsShow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+    padding-bottom: 5rem;
+    background-color: #1a202c;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
 }
 
-.shoppingCarts .show {
+.shoppingCartShow {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    scale: .7;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    overflow-x: scroll;
+    transition: all 300ms ease-in-out;
+    background-color: grey;
+    z-index: 10;
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .shoppingCart h2 {
-    text-align: left;
-    margin-left: 60px;
+    text-align: center;
     font-size: 2rem;
+
 }
 
 .shoppingCartClose box-icon {
@@ -48,7 +73,7 @@
     height: 50px;
     cursor: pointer;
     position: relative;
-    left: 810px;
+    left: 1000px;
     margin: 3rem 0 0 2rem;
 }
 
@@ -58,10 +83,15 @@
 
 .shoppingCartCenter {
     width: auto;
-    
+    margin: 20px;
     justify-content: center;
     border: 1px;
+    border-radius: 20px;
     background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
 }
 
 .shoppingCartItem {
@@ -69,8 +99,13 @@
     grid-template-columns: 1fr 2fr 1fr 1fr;
     width: 100%;
     max-width: 2rem auto;
-    box-shadow: 0 1px 10px #08a05c;
-    
+    box-shadow: 0 1px 10px black;
+    border-radius: 20px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
 }
 
 .shoppingCartItem img {
@@ -87,7 +122,7 @@
     color: #1a202c;
     font-size: 2rem;
     font-weight: bold;
-    text-align: start;
+    text-align: center;
     margin-left: -1rem;
 }
 
@@ -112,14 +147,24 @@
 }
 
 .shoppingCartFooter {
-    text-align: center;
+    margin-left: 350px;
     margin-bottom: 3rem;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
 .shoppingCartFooter h3 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 .shoppingCartFooter .btn {
@@ -133,6 +178,6 @@
 }
 
 .shoppingCartFooter .btn:hover {
-    background-color: #0f5c39;
+    background-color: darkslateblue;
     color: white
 }

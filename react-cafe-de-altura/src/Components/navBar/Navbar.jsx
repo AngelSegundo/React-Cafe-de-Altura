@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import Button from '../Button/Button'
-import Cart from "../cart/Cart"
+import Cart from "../Cart/Cart"
 import Logo from "../../assets/img/coffeCup.png"
 import Iconphone from "../../assets/img/Iconphone.png"
 import Carr from "../../assets/img/Carr.png"
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <img src={Logo} alt="Coffe Cup" />
             </article>
             <article className="menuWrapper">
-                <Link to="">Tienda</Link>
+                <Link to="/Store">Tienda</Link>
                 <Link to="">Suscipción</Link>
                 <Link to="">Para empresas</Link>
                 <Link to="">Sobre nosotros</Link>

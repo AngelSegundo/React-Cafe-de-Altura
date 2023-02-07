@@ -1,14 +1,123 @@
-.footer {
+footer {
     display: flex;
-    justify-content: center;
-    height: 50px;
-    background-color: #2B2A2B;
-    color: #ffff;
+    flex-direction: column;
+    height: 270px;
+    background: #1F1815;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-.lastSection p {
-    text-align: center;
-    padding: 12px 0;
-    color: #ffff;
-    font-weight: bold;
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: relative;
+    width: 1200px;
+    height: 204px;
+    left: 40px;
+    top: 28.61px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 7.33px;
+    width: 288px;
+    height: 36px;
+}
+
+.linksContac {
+    display: flex;
+    width: 1132px;
+    height: 152px;
+}
+
+.contactWraper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: relative;
+    width: 255.33px;
+    height: 152px;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+}
+
+.mailAndPhone {
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    gap: 8px;
+    width: fit-content;
+    height: 40px;
+    background: #515051;
+    border-radius: 4px;
+}
+
+.mailAndPhone a {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.mailAndPhone a img {
+    height: fit-content;
+    width: fit-content;
+}
+
+.menuFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: absolute;
+    width: auto;
+    height: 144px;
+    left: 577px;
+    
+}
+
+.menuFooter a {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.FooterTerm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: absolute;
+    width: 255.33px;
+    height: 80px;
+    left: 800px;
+}
+
+.FooterTerm a {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    gap: 8px;
 }

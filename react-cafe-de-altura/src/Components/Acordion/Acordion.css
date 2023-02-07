@@ -1,0 +1,47 @@
+.acordeonSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2A5B45;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.acordeonSection h3 {
+    color: white;
+}
+
+
+.acordeonBox {
+    width: 800px;
+    margin: auto;
+}
+
+.Item {
+    background-color: whitesmoke;
+}
+
+
+
+.accordion-header button {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+
+}
+
+span {
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.accordion-body {
+
+    display: flex;
+    text-align: start;
+}
+
+.flechaC {
+    margin-top: 25px;
+    color: white;
+}
