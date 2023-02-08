@@ -1,10 +1,12 @@
 .productsCartBox {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
+    justify-content:flex-start;
     padding: 40px;
     gap: 24px;
     width: 100%;
+    min-height: 772px;
     height: auto;
     
 }
@@ -22,13 +24,12 @@
 .detailsBox {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
     width: 100%;
     height: auto;
-    
 }
 
 .producTable {
@@ -38,6 +39,7 @@
     padding: 8px;
     width: 792px;
     height: auto;
+    
 }
 
 .producTable h3 {
@@ -48,4 +50,57 @@
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+}
+
+.shippingMode h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    text-align: left;
+}
+
+.shipping {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 657px;
+    height: 36px;
+    line-height: 0;
+    
+}
+
+.standar {
+    width: 180px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    text-align: left;
+}
+
+.conditionsTimes {
+    width: 600px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    color: #000000;
+    text-align: left;
+    align-items: flex-start;
 }

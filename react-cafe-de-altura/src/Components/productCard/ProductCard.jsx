@@ -5,7 +5,7 @@ import { DataContext } from '../../context/DataContext'
 import { useContext, useEffect, useState } from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import Loader from '../loader/Loader'
+import Loader from '../Loader/Loader'
 
 const ProductCard = (props) => {
 
@@ -16,7 +16,7 @@ const ProductCard = (props) => {
         <div className='cardsWrapper'>
             {fetching && <Loader />}
             {products.slice(0, showProducts).map((product) => (
-                <div div className={product.available ? "product" : "notAvailable"} key={product._id} >
+                <div className={product.available ? "product" : "notAvailable"} key={product._id} >
                     <img alt={product.brand} src={product.img_url} />
                     <div>
                         <h3 className="cardBrand">{product.brand}</h3>

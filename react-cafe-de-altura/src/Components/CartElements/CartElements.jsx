@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import './CartElements.css'
-import { BoxIconElement } from 'boxicons'
-import { Link } from 'react-router-dom'
 import decrease from '../../assets/img/Vector -.png'
 import increase from '../../assets/img/Vector +.png'
 import eliminate from '../../assets/img/delete-lcono.png'
@@ -53,17 +51,17 @@ const CartElements = () => {
                             <div className='rowItem' key={product._id}>
                                 <div className='cant counter'>
                                     <div className="minus-input">
-                                        <img onClick={() => minus(product._id)} className="minus" name="${product.id}" src={decrease} alt=""/>
+                                        <img onClick={() => minus(product._id)} className="minus" name="${product.id}" src={decrease} alt="" />
                                     </div>
                                     <div className="number-input">
                                         <p className="addQuantity">{product.amount}</p>
                                     </div>
                                     <div className="plus-input">
-                                        <img onClick={() => plus(product._id)} className="plus" name="${product.id}" src={increase} alt=""/>
+                                        <img onClick={() => plus(product._id)} className="plus" src={increase} alt="" />
                                     </div>
                                 </div>
                                 <div className="coffeBag">
-                                    <img className="itemImg" src={product.img_url} width="100"/>
+                                    <img className="itemImg" src={product.img_url} />
                                 </div>
                                 <div className="item-content">
                                     <div>
@@ -75,21 +73,13 @@ const CartElements = () => {
                                     <h3>{(product.price * product.amount).toFixed(2)} €</h3>
                                 </div>
                                 <input type="image" className="delete-product" onClick={() => removeProduct(product._id)} id={product._id} src={eliminate} height="30" width="30" />
+
                             </div>
-                        ))}
+                        )
+                        )
+                }
             </div>
-
-            {
-                cartItems.length !== 0 ?
-                    <div className='shoppingCartFooter'>
-                        <h3>Total: {total.toFixed(2)} €</h3>
-                        <h5>Incluye {(total.toFixed(2) * 0.21).toFixed(2)} € de IVA</h5>
-                    </div> : ''
-            }
-
         </div>
-
-
     )
 }
 

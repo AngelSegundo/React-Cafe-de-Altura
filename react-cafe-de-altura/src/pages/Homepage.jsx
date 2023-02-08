@@ -5,8 +5,8 @@ import Carousel from "../Components/Carousel/Carousel";
 import FeatureSection from "../Components/FeatureSection/FeatureSection";
 import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
-import Navbar from "../Components/navBar/Navbar";
-import Products from "../Components/products/Products";
+import Navbar from "../Components/NavBar/Navbar";
+import Products from "../Components/Products/Products";
 import SplitDesktop from "../Components/SplitDesktop/SplitDesktop";
 import { DataContext } from "../context/DataContext";
 

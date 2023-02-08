@@ -12,6 +12,7 @@ const DataContextProvider = ({ children }) => {
     const [showCart, setShowCart] = useState(false)
     const [productsLength, setProductsLength] = useState(0)
     const [total, setTotal] = useState(0)
+    
 
     const [cartItems, setCartItems] = useState(() => {
         try {

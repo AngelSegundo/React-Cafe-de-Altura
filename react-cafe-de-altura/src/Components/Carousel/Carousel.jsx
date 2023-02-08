@@ -2,7 +2,7 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useContext } from 'react'
-import ProductCard from '../productCard/ProductCard'
+import ProductCard from '../ProductCard/ProductCard'
 import { DataContext } from '../../context/DataContext'
 
 

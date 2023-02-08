@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './pages/Homepage';
-import Navbar from './Components/navBar/Navbar';
+import Navbar from './Components/NavBar/Navbar';
 import Cart from './Components/Cart/Cart';
 import Copyright from './Components/Copyright/Copyright';
 import { CartContextProvider } from './context/CartContext';
@@ -17,14 +17,18 @@ function App() {
     <div className="App">
       <DataContextProvider>
         <CartContextProvider>
+
           <Navbar />
           <Cart />
+
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/store' element={<Store />} />
             <Route path='/cesta' element={<Cesta />} />
-                      </Routes>
+          </Routes>
+
           <Copyright />
+
         </CartContextProvider>
       </DataContextProvider>
     </div>

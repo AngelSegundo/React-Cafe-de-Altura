@@ -1,6 +1,6 @@
 import './Products.css'
 import { useContext, useEffect, useState } from 'react'
-import ProductCard from '../productCard/ProductCard'
+import ProductCard from '../ProductCard/ProductCard'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../context/DataContext'
 
