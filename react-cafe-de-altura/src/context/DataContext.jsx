@@ -2,7 +2,6 @@ import axios from "axios";
 import { createContext, useState, useEffect } from "react";
 
 const ApiURL = 'https://cafe-de-altura-api.vercel.app/api/products'
-
 const DataContext = createContext()
 
 const DataContextProvider = ({ children }) => {
@@ -12,6 +11,7 @@ const DataContextProvider = ({ children }) => {
     const [showCart, setShowCart] = useState(false)
     const [productsLength, setProductsLength] = useState(0)
     const [total, setTotal] = useState(0)
+    const [shipping, setShipping] = useState(0)
     
 
     const [cartItems, setCartItems] = useState(() => {
@@ -80,7 +80,7 @@ const DataContextProvider = ({ children }) => {
 
     return (
         <DataContext.Provider
-            value={{ data, fetching, showCart, setShowCart, addItemToCart, deleteItemFromCart, cartItems, setCartItems, productsLength, total }}
+            value={{ data, fetching, showCart, setShowCart, addItemToCart, deleteItemFromCart, cartItems, setCartItems, productsLength, total, shipping, setShipping }}
         >
             {children}
         </DataContext.Provider>

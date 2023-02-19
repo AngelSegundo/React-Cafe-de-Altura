@@ -5,7 +5,7 @@
     padding: 40px;
     gap: 40px;
     justify-content: center;
-    align-items: center;
+        align-items: center;
     }
 
 .cards h2 {
@@ -20,10 +20,12 @@
 
 .cardsWrapper {
     display: grid;
+    
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0px;
     gap: 24px;
-    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrowBlack {

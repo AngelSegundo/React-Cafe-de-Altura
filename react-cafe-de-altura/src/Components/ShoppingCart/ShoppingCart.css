@@ -1,17 +1,18 @@
-.productsCartBox {
+.CartBox {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content:flex-start;
     padding: 40px;
     gap: 24px;
     width: 100%;
     min-height: 772px;
     height: auto;
+    justify-content: flex-start;
+    
+
     
 }
 
-.productsCartBox h2 {
+.CartBox h2 {
     width: auto;
     height: auto;
     font-style: normal;
@@ -24,12 +25,13 @@
 .detailsBox {
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
     width: 100%;
     height: auto;
+    
 }
 
 .producTable {
@@ -39,7 +41,7 @@
     padding: 8px;
     width: 792px;
     height: auto;
-    
+
 }
 
 .producTable h3 {
@@ -75,11 +77,11 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    
+
     width: 657px;
     height: 36px;
     line-height: 0;
-    
+
 }
 
 .standar {

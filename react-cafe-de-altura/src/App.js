@@ -16,20 +16,14 @@ function App() {
   return (
     <div className="App">
       <DataContextProvider>
-        <CartContextProvider>
-
-          <Navbar />
-          <Cart />
-
-          <Routes>
-            <Route path='/' element={<Homepage />} />
-            <Route path='/store' element={<Store />} />
-            <Route path='/cesta' element={<Cesta />} />
-          </Routes>
-
-          <Copyright />
-
-        </CartContextProvider>
+        <Navbar />
+        <Cart />
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/store' element={<Store />} />
+          <Route path='/cesta' element={<Cesta />} />
+        </Routes>
+        <Copyright />
       </DataContextProvider>
     </div>
   );

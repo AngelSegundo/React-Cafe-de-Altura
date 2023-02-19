@@ -5,7 +5,7 @@ const CartContext = createContext()
 const CartContextProvider = ({ children }) => {
 
     const [shipping, setShipping] = useState(0)
-    
+
     const [cartItems, setCartItems] = useState(() => {
         try {
             const productsLS = localStorage.getItem('cartProducts')
@@ -17,7 +17,6 @@ const CartContextProvider = ({ children }) => {
 
     useEffect(() => {
         localStorage.setItem('cartProducts', JSON.stringify(cartItems))
-        
     }, [cartItems])
 
     const addItemToCart = (product) => {
@@ -35,24 +34,6 @@ const CartContextProvider = ({ children }) => {
             setCartItems([...cartItems, { ...product, amount: 1 }])
         }
     }
-
-    // const addItemToCart2 = (id) => {
-    //     const inCart = cartItems.every(item => { return item.id !== id })
-
-    //     if (inCart) {
-    //         const item = data.filter(produtc => { return produtc.id === id })
-    //         setCartItems([...cartItems, { ...item, amount: 1 }])
-    //     } else {
-    //         setCartItems(
-    //             cartItems.map((productInCart) => {
-    //                 if (productInCart.id === id) {
-    //                     return { ...inCart, amount: inCart.amount + 1 }
-    //                 }
-    //             })
-    //         )
-    //     }
-    // }
-
 
 
     const deleteItemFromCart = (product) => {

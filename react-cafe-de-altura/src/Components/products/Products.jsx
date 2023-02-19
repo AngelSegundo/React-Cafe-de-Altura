@@ -1,15 +1,15 @@
 import './Products.css'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import ProductCard from '../ProductCard/ProductCard'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../context/DataContext'
 
 const Products = (props) => {
-    const { title, showProducts, link} = props
+    const { title, showProducts, link } = props
 
     const { data } = useContext(DataContext)
     const sortDataByPrice = data.sort((a, b) => a.price - b.price, 0)
-    
+
 
     sortDataByPrice.map((product) => {
         if (!product.available) {

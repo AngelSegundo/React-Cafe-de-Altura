@@ -1,9 +1,9 @@
 import './ProductCard.css'
 import Button from '../Button/Button'
-import { CartContext } from '../../context/CartContext'
+
 import { DataContext } from '../../context/DataContext'
-import { useContext, useEffect, useState } from 'react'
-import AliceCarousel from 'react-alice-carousel'
+import { useContext,  } from 'react'
+
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Loader from '../Loader/Loader'
 

@@ -6,12 +6,12 @@ import TotalCart from '../TotalCart/TotalCart'
 
 
 const ShoppingCart = () => {
-    const { showCart, setShowCart, cartItems, setCartItems, total, productsLength } = useContext(DataContext)
+    const { shipping, setShipping, productsLength } = useContext(DataContext)
 
 
 
     return (
-        <div className="productsCartBox">
+        <div className="CartBox">
             <h2>Cesta ({productsLength}) </h2>
             <div className="detailsBox">
                 <div className="producTable">
@@ -20,14 +20,12 @@ const ShoppingCart = () => {
                         <CartElements />
                         <br />
                         <br />
-                        <br />
-                        <br />
-                        <br />
+
                         <div className="shippingMode">
                             <h3>Seleccionar envío</h3>
                             <div className="shipping">
                                 <div>
-                                    <input type="radio" id="choice1" name='shippingMethod' value="0" />
+                                    <input type="radio" id="choice1" name='shippingMethod' value="0" onClick={()=>setShipping(0)} />
                                 </div>
 
                                 <div className="details">
@@ -43,7 +41,7 @@ const ShoppingCart = () => {
 
                             <div className="shipping">
                                 <div>
-                                    <input type="radio" id="choice2" name="shippingMethod" value="15" />
+                                    <input type="radio" id="choice2" name="shippingMethod" value="09" onClick={() => setShipping(9)} />
                                 </div>
 
                                 <div className="details">
@@ -61,7 +59,7 @@ const ShoppingCart = () => {
                     </div>
                 </div>
                 <div>
-                    <TotalCart/>
+                    <TotalCart shipment={shipping}/>
                 </div>
             </div>
         </div>
